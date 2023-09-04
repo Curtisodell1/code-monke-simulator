@@ -1,19 +1,18 @@
-looping = True
-while (looping):
+cred_loop = True
+while(cred_loop):
 
-    #main menu
     print("Main Menu:")
-    print("1. Study Coding")
+    print("1. Increase Coder Cred")
     print('2. Increase Coder Cred')
-    print("x. Exit the program")
+    print("x. Return to main menu")
     command = input("Input your command here:")
 
     if command == "1":
-        import studyCoding
+        print("...")
     elif command == "2":
-        import coderCred
+        print("...")
     elif command == "x":
-        looping = False
+        import main
         print("Thank you for using my cli!")
     else:
         print("your input is not recognized")
