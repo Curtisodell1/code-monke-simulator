@@ -1,4 +1,7 @@
 study_loop = True
+
+study_coding_points = 0 
+
 while(study_loop):
 
     print("How will you study?:")
@@ -8,11 +11,12 @@ while(study_loop):
     print("2. Study Option 2")
     print("x. Return to main menu")
     command = input("Input your command here:")
-
     if command == "1":
-        print("...")
+        study_coding_points += 1
+        print(f"Your coding points have increased you now have: {study_coding_points}")
     elif command == "2":
-        print("...")
+        study_coding_points -= 1
+        print(f"Your coding points have decreased you now have: {study_coding_points}")
     elif command == "x":
         study_loop = False
         print("Thank you for using my cli!")
