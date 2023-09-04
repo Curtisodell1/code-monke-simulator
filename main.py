@@ -15,5 +15,14 @@ while (looping):
     elif command == "x":
         looping = False
         print("Thank you for using my cli!")
+    elif command == "01010011 01100101 01100011 01110010 01100101 01110100":
+        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
+        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
+        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
+        print ("You've successfully mastered the universe")
+        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
+        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
+        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
+        looping = False
     else:
         print("your input is not recognized")
