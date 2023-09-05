@@ -1,6 +1,6 @@
 cred_loop = True
 
-coder_cred_score = 0 
+coder_cred_score = 0
 
 while(cred_loop):
 
