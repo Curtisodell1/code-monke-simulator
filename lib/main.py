@@ -20,7 +20,7 @@ while (looping):
         exec(coder_cred_loop)
     elif command == "x":
         looping = False
-        print("Thank you for using my cli!")
+        print("Thanks for wasting my time!")
     elif command == "01010011 01100101 01100011 01110010 01100101 01110100": #Secret
         print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
         print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
