@@ -1,5 +1,4 @@
 cred_loop = True
-
 coder_cred_score = 0
 
 while(cred_loop):
@@ -21,4 +20,5 @@ while(cred_loop):
         cred_loop = False
     else:
         print("your input is not recognized")
+
 
