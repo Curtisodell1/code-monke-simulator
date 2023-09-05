@@ -1,8 +1,8 @@
 study_loop = True
 study_coding_points = 0 
 
-while(study_loop):
 
+while(study_loop):
     print("How will you study?:")
     # these options will be replaced by a SQL database of topics to study
     # users can either query the database to choose a topic or get something new
@@ -20,3 +20,6 @@ while(study_loop):
         study_loop = False
     else:
         print("your input is not recognized")
+
+
+
