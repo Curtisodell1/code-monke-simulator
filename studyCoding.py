@@ -1,5 +1,4 @@
 study_loop = True
-
 study_coding_points = 0 
 
 while(study_loop):
@@ -19,6 +18,5 @@ while(study_loop):
         print(f"Your coding points have decreased you now have: {study_coding_points}")
     elif command == "x":
         study_loop = False
-        print("Thank you for using my cli!")
     else:
         print("your input is not recognized")
