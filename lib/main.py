@@ -1,6 +1,14 @@
+from welcome_menu import welcome_menu
+from login import login
 looping = True
 days = 0
 actions = 0
+user_id = None
+
+welcome_menu()
+user_id = login()
+
+import ipdb; ipdb.set_trace()
 
 while (looping):
     #main menu

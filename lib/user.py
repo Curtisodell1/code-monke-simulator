@@ -14,7 +14,7 @@ class User:
         User.all.append(self)
     
     def __repr__(self):
-        return f'(Username: {self.username}), (Password: {self.password})'
+        return f'(ID: {self.id}), (Username: {self.username}), (Password: {self.password})'
 
     def save(self):
         sql = """
@@ -68,12 +68,23 @@ class User:
         sql = """
             SELECT * FROM users
             WHERE username = ?
-            LIMIT 1
         """
         row = CURSOR.execute(sql, (username,)).fetchone()
         if not row:
             return None
         return User(username=row[1], password=row[2], id=row[0])
+    
+    @classmethod
+    def check_password(cls, username, password):
+        sql = """
+            SELECT id FROM users
+            WHERE username = ?
+            AND password = ?
+        """
+        row = CURSOR.execute(sql, (username, password,)).fetchone()
+        if not row:
+            return None
+        return row
     
     @classmethod
     def find_by_id(cls, id):
