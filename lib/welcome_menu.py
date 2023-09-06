@@ -39,7 +39,6 @@ l.           |     |           .l
         print("|||||||||||||||||||||||||||||||||||||||||")
         print("|1. Create Account  |||||||||||||||||||||")
         print("|2. Login           |||||||||||||||||||||")
-        print("|x. Exit the program|||||||||||||||||||||")
         print("|||||||||||||||||||||||||||||||||||||||||")
 
         command = input("Input your command here:")
@@ -48,17 +47,7 @@ l.           |     |           .l
                 user_creator_loop = user_creator.read()
             exec(user_creator_loop)
         elif command == "2":
-            with open("login.py") as login:
-                login_loop = login.read()
-            exec(login_loop)
-        elif command == "x":
             looping = False
-            print("|||||||||||||||||||||||||||||||||||||||||") 
-            print("Thanks for wasting my time!")
-            print("|||||||||||||||||||||||||||||||||||||||||")
         else:
             print("|||||||||||||||||||||||||||||||||||||||||") 
             print('Try again, dumbass.')
-
-if __name__ == '__main__':
-    welcome_menu()
