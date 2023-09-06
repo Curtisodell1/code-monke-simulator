@@ -23,3 +23,4 @@ class Resource:
             );
         '''
         CURSOR.execute( sql )
+        CONN.commit()
