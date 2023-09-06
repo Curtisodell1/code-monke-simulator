@@ -10,12 +10,12 @@ while (looping):
     print("x. Exit the program")
 
     command = input("Input your command here:")
-    if command == "1":
-        with open("studyCoding.py") as study_coding:
+    if command == "1": 
+        with open("lib/studyCoding.py") as study_coding:
             study_coding_loop = study_coding.read()
         exec(study_coding_loop)
     elif command == "2":
-        with open("coderCred.py") as coder_cred:
+        with open("lib/coderCred.py") as coder_cred:
             coder_cred_loop = coder_cred.read()
         exec(coder_cred_loop)
     elif command == "x":
