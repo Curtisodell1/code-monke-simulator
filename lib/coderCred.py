@@ -5,8 +5,8 @@ while(cred_loop):
 
     print("Increase your Coder Cred:")
     #Need to add logic to this and have options built out.
-    print("1. Coder Cred option 1")
-    print("2. Coder Cred option 2")
+    print("1. Play video games")
+    print("2. Take a shower")
     print("x. Return to main menu")
     command = input("Input your command here:")
 
