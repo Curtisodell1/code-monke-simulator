@@ -43,7 +43,7 @@ l.           |     |           .l
 
         command = input("Input your command here:")
         if command == "1":
-            with open("user_creator_menu.py") as user_creator:
+            with open("lib/user_creator_menu.py") as user_creator:
                 user_creator_loop = user_creator.read()
             exec(user_creator_loop)
         elif command == "2":
