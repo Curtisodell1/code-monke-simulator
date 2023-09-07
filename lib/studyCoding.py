@@ -1,4 +1,7 @@
+still_studying = True
 study_loop = True
+from cliArt import header_art
+from cliArt import footer_art
 study_coding_points = 0 
 import sqlite3
 CONN = sqlite3.connect('resources.sql')
@@ -48,18 +51,26 @@ while(study_loop):
     print("How will you study?:")
     # these options will be replaced by a SQL database of topics to study
     # users can either query the database to choose a topic or get something new
-    print("1. Study Option 1")
+    print("1. Show a list of topics to study!")
     print("2. Choose to learn about a topic")
-    print("x. Return to main menu")
     command = input("Input your command here:")
     if command == "1":
         #print list of things to study
         print(topics.get_topics())
     elif command == "2":
         topic_id = input("Select the study topic by ID:")
-        print(topics.select_topic())
-        study_coding_points += 1
-        print(f"Your coding points have increased you now have: {study_coding_points}")    
+        while still_studying:
+            print("________________________________________________________________________________________________________________________")
+            print(topics.select_topic())
+            print("________________________________________________________________________________________________________________________")
+            finished_study = input("Have you mastered this topic? \nEnter y/n:")
+            if finished_study == "y":
+                still_studying = False
+                study_loop = False    
+            elif finished_study == "n":
+                print("Keep Studying!")
+            else:
+                print("Keep studying, dumbass, and learn to read!")
     elif command == "x":
         study_loop = False
     else:
