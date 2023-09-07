@@ -1,3 +1,6 @@
+from cliArt import secret_wrapper
+from cliArt import header_art
+from cliArt import footer_art
 from welcome_menu import welcome_menu
 from login import login
 looping = True
@@ -8,17 +11,13 @@ user_id = None
 welcome_menu()
 user_id = login()
 
-import ipdb; ipdb.set_trace()
-
 while (looping):
     #main menu
     if actions > 2:
         actions = 0
         days += 1
-        from cliArt import header_art
         header_art()
         print("Good job code monkey! You've made it through another day of Googling and using CTRL + C and CTRL + V")
-        from cliArt import footer_art
         footer_art()
     print("Main Menu:")
     print("1. Study Coding")
@@ -39,13 +38,9 @@ while (looping):
         looping = False
         print("Thanks for wasting my time!")
     elif command == "01010011 01100101 01100011 01110010 01100101 01110100": #Secret
-        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
-        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
-        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_--_-*')
+        secret_wrapper()
         print ("You've successfully mastered the universe")
-        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
-        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
-        print ('*-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-*')
+        secret_wrapper()
         looping = False
     else:
         print("your input is not recognized")
