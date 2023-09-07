@@ -6,6 +6,8 @@ from welcome_menu import welcome_menu
 from login import login
 from playsound import playsound
 from topics_studied_by_user import *
+from studyCoding import study_coding
+from coderCred import coder_cred
 looping = True
 days = 0
 actions = 0
@@ -27,19 +29,14 @@ while (looping):
         footer_art()
     print("Main Menu:")
     print("1. Study Coding")
-    print('2. How many topics have I studied')
+    print('2. Increase coder cred')
     print("x. Exit the program")
     command = input("Input your command here:")
     if command == "1": 
         actions += 1
-        with open("lib/studyCoding.py") as study_coding:
-            study_coding_loop = study_coding.read()
-        exec(study_coding_loop)
+        study_coding(user_id)
     elif command == "2":
-        actions += 1
-        with open("lib/coderCred.py") as coder_cred:
-            coder_cred_loop = coder_cred.read()
-        exec(coder_cred_loop)
+        coder_cred()
     elif command == "x":
         looping = False
         print("Thanks for wasting my time!")
