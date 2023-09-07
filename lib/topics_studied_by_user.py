@@ -32,6 +32,10 @@ class Topics_By_User:
         CURSOR.execute(sql, (user_id, topic_id) )
         CONN.commit()
 
+    @classmethod
+    def get_number_of_topics_studied(cls, user_id):
+        pass
+
 # Self.ID = user id global variable
 # self.topic = topic currently being studied
 # INSERT INTO using this info
