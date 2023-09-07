@@ -55,14 +55,11 @@ while(study_loop):
     if command == "1":
         #print list of things to study
         print(topics.get_topics())
-        
-        study_coding_points += 1
-        print(f"Your coding points have increased you now have: {study_coding_points}")
     elif command == "2":
-            topic_id = input("Select the study topic by ID:")
-            print(topics.select_topic())
-        #once you click on a topic to study it'll return you to the main menu and add a studied point to the user db
-            #study loop Once studied you click y        
+        topic_id = input("Select the study topic by ID:")
+        print(topics.select_topic())
+        study_coding_points += 1
+        print(f"Your coding points have increased you now have: {study_coding_points}")    
     elif command == "x":
         study_loop = False
     else:

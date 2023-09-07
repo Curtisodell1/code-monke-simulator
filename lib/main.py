@@ -8,8 +8,6 @@ user_id = None
 welcome_menu()
 user_id = login()
 
-import ipdb; ipdb.set_trace()
-
 while (looping):
     #main menu
     if actions > 2:
