@@ -1,4 +1,7 @@
+from cliArt import keyboard
+
 def welcome_menu():
+
     print('''               
               __M__
             ,.-" "-.,
@@ -29,6 +32,7 @@ l.           |     |           .l
   |             |             |         |
    \T_|E_|D_|__/ \C_|U_|R_|T_/ \_|__|__/ 
 ''')
+    keyboard('Code Monke')
     print("|||||||||||||||||||||||||||||||||||||||||")
     print("          CODE MONKE SIMULATOR           ")
     looping = True
