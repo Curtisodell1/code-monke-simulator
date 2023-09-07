@@ -1,3 +1,9 @@
+from pyfiglet import Figlet
+
+def keyboard(input):
+    custom_fig = Figlet(font='smkeyboard')
+    print(custom_fig.renderText(input))
+
 def header_art():
     print("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
     print("____________________________________________________________________________________________________")
