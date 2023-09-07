@@ -11,6 +11,8 @@ class topics:
         self.example = example
         self.relevant_content = relevant_content
         self.id = id
+
+    # Pull a list of topics
     @classmethod    
     def get_topics(cls):
         sql = 'SELECT * FROM resources'
@@ -25,15 +27,29 @@ class topics:
     def show_topic(cls, record):
         return f"id: {record[0]},topic:{record[1]} |"
     
-    # def format_topic():
-    #     show_topic()
+
+    @classmethod    
+    def select_topic(cls):
+        sql = f'SELECT * FROM resources WHERE id = {topic_id}'
+        topic = CURSOR.execute(sql).fetchone()
+        return topics.show_selected_topic(topic)
+    
+    @classmethod
+    def show_selected_topic(cls, record):
+        return f'''
+            id: {record[0]}
+            topic: {record[1]}
+            synopsis: {record[2]}
+            example: {record[3]}
+            external_links: {record[4]}
+        '''
 
 while(study_loop):
     print("How will you study?:")
     # these options will be replaced by a SQL database of topics to study
     # users can either query the database to choose a topic or get something new
     print("1. Study Option 1")
-    print("2. Study Option 2")
+    print("2. Choose to learn about a topic")
     print("x. Return to main menu")
     command = input("Input your command here:")
     if command == "1":
@@ -43,9 +59,8 @@ while(study_loop):
         study_coding_points += 1
         print(f"Your coding points have increased you now have: {study_coding_points}")
     elif command == "2":
-        #choose what to study
-        study_coding_points -= 1
-        print(f"Your coding points have decreased you now have: {study_coding_points}")
+            topic_id = input("Select the study topic by ID:")
+            print(topics.select_topic())
         #once you click on a topic to study it'll return you to the main menu and add a studied point to the user db
             #study loop Once studied you click y        
     elif command == "x":
