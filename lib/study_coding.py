@@ -15,7 +15,6 @@ def study_coding(user_id):
             all_resources = Resources.get_topics()
             for record in all_resources:
                 print(record)
-            print(Resources.get_topics())
         elif command == "2":
             topic_id = input("Select the study topic by ID:")
             while still_studying:
