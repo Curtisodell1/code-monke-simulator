@@ -23,7 +23,9 @@ class Resources:
 
     @classmethod
     def show_topic(cls, record):
-        return f"id: {record[0]},topic:{record[1]}"
+        return f"{record[0]}. {record[1]}"
+    
+
 
 #Selects a specific task based on user input
     @classmethod    

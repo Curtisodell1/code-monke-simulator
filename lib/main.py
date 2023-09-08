@@ -5,7 +5,7 @@ from cliArt import keyboard
 from welcome_menu import welcome_menu
 from login import login
 from topics_studied_by_user import *
-from studyCoding import study_coding
+from study_coding import study_coding
 from coderCred import coder_cred
 from code_monke_dance import code_monke_dance
 looping = True

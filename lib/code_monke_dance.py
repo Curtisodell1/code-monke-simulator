@@ -47,5 +47,5 @@ def code_monke_dance():
         sleep(0.375)
             
         y += 1
-        if y > 257:
+        if y > 255:
             looping = False
