@@ -4,17 +4,15 @@ from cliArt import footer_art
 from cliArt import keyboard
 from welcome_menu import welcome_menu
 from login import login
-from playsound import playsound
 from topics_studied_by_user import *
 from studyCoding import study_coding
 from coderCred import coder_cred
+from code_monke_dance import code_monke_dance
 looping = True
 days = 0
 actions = 0
 user_id = None
 
-
-playsound("lib/code_monkey.wav", False)
 
 welcome_menu()
 user_id = login()
@@ -30,6 +28,7 @@ while (looping):
     print("Main Menu:")
     print("1. Study Coding")
     print('2. Increase coder cred')
+    print('3. Do the monke')
     print("x. Exit the program")
     command = input("Input your command here:")
     if command == "1": 
@@ -37,6 +36,8 @@ while (looping):
         study_coding(user_id)
     elif command == "2":
         coder_cred()
+    elif command == "3":
+        code_monke_dance()
     elif command == "x":
         looping = False
         print("Thanks for wasting my time!")
