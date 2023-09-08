@@ -10,6 +10,7 @@ def clear():
 
 def code_monke_dance():
     playsound("lib/code_monkey.wav", False)
+    y = 0
     looping = True
     while looping:
         clear()
@@ -25,7 +26,7 @@ def code_monke_dance():
               
 
 
-     Press 'x' to be lame
+     Press 'CTRL + C' to be lame
     ''')
         sleep(0.375)
         clear()
@@ -41,6 +42,10 @@ def code_monke_dance():
 
 
 
-     Press 'x' to be lame
+     Press 'CTRL + C' to be lame
     ''')
         sleep(0.375)
+        y += 1
+        if y > 255:
+            looping = False
+        
