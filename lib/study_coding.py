@@ -1,6 +1,6 @@
 from cliArt import header_art
 from cliArt import footer_art
-from resources_class_methods import *
+from study_class_methods import *
 from topics_studied_by_user import *
 
 def study_coding(user_id):
@@ -12,7 +12,9 @@ def study_coding(user_id):
         print("2. Choose to learn about a topic")
         command = input("Input your command here:")
         if command == "1":
-            #print list of things to study
+            all_resources = Resources.get_topics()
+            for record in all_resources:
+                print(record)
             print(Resources.get_topics())
         elif command == "2":
             topic_id = input("Select the study topic by ID:")
