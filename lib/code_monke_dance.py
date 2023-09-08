@@ -2,6 +2,8 @@ from os import system, name
 from time import sleep
 from playsound import playsound
 
+
+
 def clear():
     if name == 'nt':
         _ = system('cls')
@@ -10,6 +12,7 @@ def clear():
 
 def code_monke_dance():
     playsound("lib/code_monkey.wav", False)
+    y = 0
     looping = True
     while looping:
         clear()
@@ -24,8 +27,7 @@ def code_monke_dance():
              m  m
               
 
-
-     Press 'x' to be lame
+     Press 'CTRL + C' to be lame
     ''')
         sleep(0.375)
         clear()
@@ -40,7 +42,10 @@ def code_monke_dance():
               m  m
 
 
-
-     Press 'x' to be lame
+     Press 'CTRL + C' to be lame
     ''')
         sleep(0.375)
+            
+        y += 1
+        if y > 257:
+            looping = False
